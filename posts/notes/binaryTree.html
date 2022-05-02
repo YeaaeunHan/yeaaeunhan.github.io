@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<title>Binary Tree</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+                <div id="main">
+                    <div class="inner">
+
+                        <!-- Header -->
+                        <header id="header">
+                            <a href="../../index.html" class="logo"><strong>YEAEUN HAN</strong></a>
+                            <ul class="icons">
+                                <li><a href="https://github.com/YeaaeunHan" class="icon brands fa-snapchat-ghost"><span class="label">Github</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/yeaeun-han/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linked-in</span></a></li>
+                            </ul>
+                        </header>
+
+                        <!-- Content -->
+                            <section>
+                                <header class="main">
+                                    <h1>Binary Tree</h1>
+                                </header>
+
+                                <span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+
+                                <p>A tree with maximum 2 nodes is called "Binary Tree". It can be traversed in depth first way. 
+                                    Regardless of level of tree, it considers going through depth first. It searches from leaves 
+                                    and can be implemented with recursive codes. There are 3 ways to do it, in-order Traversal, 
+                                    pre-order Traversal, post-order Traversal.</p>
+                                <p>Because every node needs to be visited at the worst case, time complexity of all traversals is O(n).</p>
+                                <p></p>
+
+                                <hr class="major" />
+
+                                <h2>- In-order Traversal (Left-Root-Right)</h2>
+                                <p>A node on the tree can be divided by left subtree and right subtree. The logic is that after 
+                                    searching on left subtree, visit the root and search right subtree. The pattern goes over again. </p>
+
+                                <h3>With Recursion</h3>
+                                <p>
+                                    As finding the last and left node with no left child node by recalling inorder(node.left, stack), 
+                                    the node is inserted in stack. Then, it goes to right subtree to find the last and left node with 
+                                    no left child node by calling inorder(node.right, stack). 
+                                    <pre><code>
+                                        // Recursive
+                                        // Time complexity: O(n)
+                                        // Space: O(n)
+
+                                        var inorderTraversal = function(root) {
+                                            let stack = [];
+                                            inorder(root, stack);
+                                            return stack;
+                                        };
+
+                                        function inorder(node, stack){
+                                            if(!node) return stack;
+                                            inorder(node.left, stack);
+                                            stack.push(node.val);
+                                            inorder(node.right, stack);
+                                            return stack;
+                                        } 
+                                    </code></pre>
+                                </p>
+                                <h3>With Iteration</h3>
+                                <p>
+                                    There is a stack to track the node and result for returning the result. When the last and left 
+                                    node does not have left child node, it is popped from the stack and inserted in result. Then it 
+                                    goes to right tree to find the last and left node with no left child node. To make sure to go 
+                                    through every node, stack needs to be checked whether it is empty or not. 
+                                    <pre><code>
+                                        // Iteration
+                                        // Time complexity: O(n)
+                                        // Space: O(n)
+
+                                        var inorderTraversal = function(root) {
+                                            let stack = [];
+                                            let result = [];
+                                            let node = root
+                                            while(node || stack.length>0){
+                                                while(node){
+                                                    stack.push(node);
+                                                    node = node.left;
+                                                }
+                                                node = stack.pop();
+                                                result.push(node.val);
+                                                node = node.right;
+                                            }
+                                            return result;
+                                        };
+                                    </code></pre>
+                                </p>
+                            </section>
+
+                            <section>
+                                </section>
+
+                            <section>
+                        <footer class="post-date">Drafted: 2022-05-02 </footer>           
+                        </section>
+                    </div>
+                </div>
+
+
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+
+                    <!-- Search -->
+                        <section id="search" class="alt">
+
+                            
+                        </section>
+
+                    <!-- Menu -->
+                        <nav id="menu">
+                            <header class="major">
+                                <h2>Menu</h2>
+                            </header>
+                            <ul>
+                                <li><a href="../../index.html">Home</a></li>
+                                <!--<li><a href="../../about.html">Yeaeun Han</a></li>-->
+                                <!--<li><a href="elements.html">Elements</a></li>-->
+                                <li>
+                                    <span class="opener">Projects</span>
+                                    <ul>
+                                        <li><a href="#">Grades Calculator</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="opener">Learning Notes</span>
+                                    <ul>
+                                        <li><a href="binaryTree.html">Data Structures</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    <!-- Section -->
+                        <section>
+                            <header class="major">
+                                <h2>Get in touch</h2>
+                            </header>
+                            <ul class="contact">
+                                <li class="icon solid fa-envelope">yeaaeun.han@gmail.com</li>
+                                <li class="icon solid fa-home">Totonto, Ontario, Canada</li>
+                            </ul>
+                        </section>
+
+                    <!-- Footer -->
+                        <footer id="footer">
+                            <p class="copyright">&copy; YeaaeunHan. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                        </footer>
+
+                    </div>
+                </div>
+
+        </div>
+
+    <!-- Scripts -->
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/browser.min.js"></script>
+        <script src="../../assets/js/breakpoints.min.js"></script>
+        <script src="../../assets/js/util.js"></script>
+        <script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
