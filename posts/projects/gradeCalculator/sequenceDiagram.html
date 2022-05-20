@@ -26,40 +26,231 @@
                         <!-- Content -->
                             <section>
                                 <header class="main">
-                                    <h1>Sequence Diagrams</h1>
+                                    <h1>Object Level Sequence Diagrams</h1>
                                 </header>
 
                                 <span class="image main"><img src="images/pic11.jpg" alt="" /></span>
 
-                                <p>Grade Calculator helps students to insert, update, delete scores. </p>
-                                <p></p>
+                                <p>Grade calculator helps students to insert, update, and delete scores. Acceptable criteria are 
+                                    1) the ability to record grades 
+                                    2) the ability to query those grades to calculate grades.
+                                </p>
+                                <p>The program adds a grade with number, type, title, score, full mark.
+                                    It finds the exact grade by number and type.</p>
                                 <p></p>
 
                                 <hr class="major" />
 
-                                <h2>- Insert Grade</h2>
-                                <!--<p>A node on the tree can be divided by left subtree and right subtree. The logic is that after 
-                                    searching on left subtree, visit the root and search right subtree. The pattern goes over again. </p>-->
+                                <h2>- Insert Grade</h2> 
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">Use Case Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Use Case Name</td>
+                                                <td colspan="2">Insert a grade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Triggering Event</td>
+                                                <td colspan="2">A student requests to add a grade </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brief Description</td>
+                                                <td colspan="2">Allows the student to record a new grade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Actors</td>
+                                                <td colspan="2">Student</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pre-conditions</td>
+                                                <td colspan="2">Student has opened the main menu.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Post Conditions</td>
+                                                <td colspan="2">Grade is saved to the database.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flow of Activities</td>
+                                                <td>Actor</td>
+                                                <td>System</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Requests to insert grade.</td>
+                                                <td>Prompts for number, type, title, current score, and full mark.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Enter number, type, title, current score, and full mark.</td>
+                                                <td>Verifies number, type, title, current score, and full mark has been entered.<br>
+                                                    Displays number, type, title, current score, and full mark.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Requests to save.</td>
+                                                <td>Saves a grade.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Exception Conditions</td>
+                                                <td colspan="2">Student chooses to cancel adding the grade.</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
                                 <span class=""><img class="diagram" src="image/SD_insert.jpg" alt="Sequence diagram for insert grade" width="700"/></span>
                             </section>
 
                             <section>
                                 <h2>- Update Grade</h2>
-                                <!--<p>A node on the tree can be divided by left subtree and right subtree. The logic is that after 
-                                    searching on left subtree, visit the root and search right subtree. The pattern goes over again. </p>-->
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">Use Case Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Use Case Name</td>
+                                                <td colspan="2">Change a grade description</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Triggering Event</td>
+                                                <td colspan="2">A student requests to update the grade description</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brief Description</td>
+                                                <td colspan="2">Allows the student to change a grade description</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Actors</td>
+                                                <td colspan="2">Student</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pre-conditions</td>
+                                                <td colspan="2">Student has opened the main menu.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Post Conditions</td>
+                                                <td colspan="2">Grade is changed and able to query.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flow of Activities</td>
+                                                <td>Actor</td>
+                                                <td>System</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Requests to change grade description.</td>
+                                                <td>Prompts for number, type.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Enter number, type.</td>
+                                                <td>Verifies number, type has been entered.<br>
+                                                    Retrieves the grade description and prompts for update.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Update number, type, title, current score, and full mark.</td>
+                                                <td>Displays number, type has been entered.<br>
+                                                    Prompts for update.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Requests to save.</td>
+                                                <td>Saves the grade and returns to the main menu.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Exception Conditions</td>
+                                                <td colspan="2">Student chooses to cancel updating the grade.</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
                                     <span class=""><img class="diagram" src="image/SD_update.jpg" alt="Sequence diagram for update grade" width="700"/></span>
                             </section>
 
                             <section>
                                 <h2>- Delete Grade</h2>
-                                <!--<p>A node on the tree can be divided by left subtree and right subtree. The logic is that after 
-                                    searching on left subtree, visit the root and search right subtree. The pattern goes over again. </p>-->
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">Use Case Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Use Case Name</td>
+                                                <td colspan="2">Delete a grade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Triggering Event</td>
+                                                <td colspan="2">A student requests to delete a grade </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brief Description</td>
+                                                <td colspan="2">Allows the student to delete an existing grade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Actors</td>
+                                                <td colspan="2">Student</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pre-conditions</td>
+                                                <td colspan="2">Student has opened the main menu.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Post Conditions</td>
+                                                <td colspan="2">The grade is deleted.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Flow of Activities</td>
+                                                <td>Actor</td>
+                                                <td>System</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Requests to delete grade.</td>
+                                                <td>Prompts for number, type.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Enter number, type.</td>
+                                                <td>Verifies number, type has been entered.<br>
+                                                    Retrieves the grade description and prompts for delete.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Chooses to delete.</td>
+                                                <td>Deletes the grade and returns to the main menu.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Exception Conditions</td>
+                                                <td colspan="2">Student chooses to cancel deleting the grade.</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
                                     <span class=""><img class="diagram" src="image/SD_delete.jpg" alt="Sequence diagram for delete grade" width="700"/></span>
                                 </section>
                             </section>
 
                             <section>
-                                <footer class="post-date">Drafted: 2022-05-04 </footer>           
+                                <footer class="post-date">Drafted: 2022-05-20 </footer>           
                             </section>
                     </div>
                 </div>
