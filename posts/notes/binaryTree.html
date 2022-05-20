@@ -26,7 +26,7 @@
                         <!-- Content -->
                             <section>
                                 <header class="main">
-                                    <h1>Binary Tree</h1>
+                                    <h1>Binary Tree - Traversal</h1>
                                 </header>
 
                                 <span class="image main"><img src="images/pic11.jpg" alt="" /></span>
@@ -50,23 +50,23 @@
                                     the node is inserted in stack. Then, it goes to right subtree to find the last and left node with 
                                     no left child node by calling inorder(node.right, stack). 
                                     <pre><code>
-                                        // Recursive
-                                        // Time complexity: O(n)
-                                        // Space: O(n)
+                                    // Recursive
+                                    // Time complexity: O(n)
+                                    // Space: O(n)
 
-                                        var inorderTraversal = function(root) {
-                                            let stack = [];
-                                            inorder(root, stack);
-                                            return stack;
-                                        };
+                                    var inorderTraversal = function(root) {
+                                        let stack = [];
+                                        inorder(root, stack);
+                                        return stack;
+                                    };
 
-                                        function inorder(node, stack){
-                                            if(!node) return stack;
-                                            inorder(node.left, stack);
-                                            stack.push(node.val);
-                                            inorder(node.right, stack);
-                                            return stack;
-                                        } 
+                                    function inorder(node, stack){
+                                        if(!node) return stack;
+                                        inorder(node.left, stack);
+                                        stack.push(node.val);
+                                        inorder(node.right, stack);
+                                        return stack;
+                                    } 
                                     </code></pre>
                                 </p>
                                 <h3>With Iteration</h3>
@@ -131,7 +131,7 @@
                                 <li>
                                     <span class="opener">Projects</span>
                                     <ul>
-                                        <li><a href="#">Grades Calculator</a></li>
+                                        <li><a href="../projects/gradeCalculator/sequenceDiagram.html">Grade Calculator</a></li>
                                     </ul>
                                 </li>
                                 <li>
