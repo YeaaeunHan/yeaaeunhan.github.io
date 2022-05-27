@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+		<title>Class Diagram</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../assets/css/main.css" />
+    </head>
+    <body class="is-preload">
+		<!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Main -->
+                <div id="main">
+                    <div class="inner">
+
+                        <!-- Header -->
+                        <header id="header">
+                            <a href="../../../index.html" class="logo"><strong>YEAEUN HAN</strong></a>
+                            <ul class="icons">
+                                <li><a href="https://github.com/YeaaeunHan" class="icon brands fa-snapchat-ghost"><span class="label">Github</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/yeaeun-han/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linked-in</span></a></li>
+                            </ul>
+                        </header>
+
+                        <!-- Content -->
+                            <section>
+                                <header class="main">
+                                    <h1>Class Diagram</h1>
+                                </header>
+
+                                <span class="image main"><img class="diagram" src="image/CD.JPG" alt="Class diagram" /></span>
+
+                                <p>
+                                    Grade calculator consists of 4 classes in the diagram, which are Grade, Requirement, Weighted, and Not-Equal-Weighted. 
+                                </p>
+                                <h2>- Class Description</h2>
+                                <h3>Grade</h3>
+                                <p>Grade class contains 7 attributes, which are course code for the subject, number, type, title, score, full mark, and counter for best mark.
+                                </p>
+                                <p>
+                                    <strong>courseCode</strong> : Up to 10 characters and need to uniquely defined. <br>
+                                    <strong>no</strong> : Ordinal number of an assessment. <br>
+                                    <strong>type</strong> : 1 character with W, Q, A, or T. 'W' for weekly task, 'Q' for Quiz, 'A' for Assignment, and 'T' for Test.<br>
+                                    <strong>score</strong> : The mark the student earned.<br>
+                                    <strong>fullMark</strong> : Maximum mark that student can earn.<br>
+                                </p>
+
+                                <h3>Requirement</h3>
+                                <p>It has 4 attributes, which are course code for the subject, overall weight to pass, and 2 policies. 
+                                </p>
+                                <p>
+                                    <strong>courseCode</strong> : Up to 10 characters and need to uniquely defined. <br>
+                                    <strong>overall</strong> : Overall mark to pass the course. <br>
+                                    <strong>policy1, 2</strong> : Extra conditions that need to be satisfied to pass the course<br>
+                                </p>
+
+
+                                <h3>Weighted</h3>
+                                <p>It has 7 attributes, which are course for the subject, type of assessment, whether it is equal weighted assessment,
+                                    name of assessment, total weight for it, the number of assessment that counts for final grade, and 
+                                    max for the maximum number of assessment for the term. 
+                                </p>
+                                <p>
+                                    <strong>course</strong> : Up to 10 characters and need to uniquely defined. <br>
+                                    <strong>type</strong> : 1 character with W, Q, A, or T. 'W' for weekly task, 'Q' for Quiz, 'A' for Assignment, and 'T' for Test.<br>
+                                    <strong>equal</strong> : Whether the assessment type is evaluated equally or not.<br>
+                                    <strong>assessName</strong> : Name of the test.<br>
+                                    <strong>totalWeight</strong> : Total weight of the assessment type.<br>
+                                    <strong>count</strong> : The number of assessments that counts for final grade.<br>
+                                    <strong>max</strong> : Maximum number of assessment.<br>
+                                </p>
+
+                                <h3>Not-Equal-Weighted</h3>
+                                <p>
+                                    It has 1 attributes, each weight to store not equal weighted assessment. Other attributes are inherited by Weighted class. 
+                                </p>
+                                <p>
+                                    <strong>eachWeight</strong> : When type of assessment has different weight on each assessment, each weight will be stored separately.<br>
+                                </p>
+                            </section>
+                            <section>
+                                <h2>- Association</h2>
+                                <p>
+                                    Grade class does not have an association with any other class. <br>
+                                    Requirement of a course can have many weighted class with different type of assessment.<br>
+                                    When assessment has different weight on each assessment, it will have a notEqualWeighted that inherits Weight class.
+                                </p>
+                            </section>
+                            <section>
+                                <footer class="post-date">Drafted: 2022-05-23 </footer> 
+                            </section>
+
+                    </div>
+                </div>
+
+
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div class="inner">
+
+                    <!-- Search -->
+                        <section id="search" class="alt">
+
+                            
+                        </section>
+
+                    <!-- Menu -->
+                        <nav id="menu">
+                            <header class="major">
+                                <h2>Menu</h2>
+                            </header>
+                            <ul>
+                                <li><a href="../../../index.html">Home</a></li>
+                                <!--<li><a href="../../about.html">Yeaeun Han</a></li>-->
+                                <!--<li><a href="elements.html">Elements</a></li>-->
+                                <li>
+                                    <span class="opener">Projects</span>
+                                    <ul>
+                                        <li><a href="contents.html">Grade Calculator</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="opener">Learning Notes</span>
+                                    <ul>
+                                        <li><a href="../../notes/binaryTree.html">Data Structures</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    <!-- Section -->
+                        <section>
+                            <header class="major">
+                                <h2>Get in touch</h2>
+                            </header>
+                            <ul class="contact">
+                                <li class="icon solid fa-envelope">yeaaeun.han@gmail.com</li>
+                                <li class="icon solid fa-home">Totonto, Ontario, Canada</li>
+                            </ul>
+                        </section>
+
+                    <!-- Footer -->
+                        <footer id="footer">
+                            <p class="copyright">&copy; YeaaeunHan. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                        </footer>
+
+                    </div>
+                </div>
+
+        </div>
+
+    <!-- Scripts -->
+        <script src="../../../assets/js/jquery.min.js"></script>
+        <script src="../../../assets/js/browser.min.js"></script>
+        <script src="../../../assets/js/breakpoints.min.js"></script>
+        <script src="../../../assets/js/util.js"></script>
+        <script src="../../../assets/js/main.js"></script>
+
+</body>
+</html>
